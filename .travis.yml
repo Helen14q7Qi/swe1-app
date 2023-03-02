@@ -1,0 +1,29 @@
+language: python
+
+python:
+  - 3.7
+
+install:
+  - pip install -r requirements.txtpip
+
+before_script:
+  - python manage.py migrate
+  - python manage.py collectstatic --noinput
+
+script:
+  - black --check .
+  - flake8 .
+  - coverage run ebdjango/manage.py test 
+
+after_script:
+  - COVERALLS_REPO_TOKEN=ZrSRNiGR0JX1DxOYgG9QGur4St5YeQAIt coveralls  
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "Encrypted <access-key-id>=AKIARMWT2YKIYP2TJRBY"
+  secret_access_key:
+    secure: "Encypted <secret-access-key>=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"
+  region: "us-west-2"
+  app: "django-tutorial"
+  env: "django-env"
