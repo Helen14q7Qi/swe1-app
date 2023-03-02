@@ -15,15 +15,18 @@ script:
   - flake8 .
   - coverage run ebdjango/manage.py test 
 
-after_script:
-  - COVERALLS_REPO_TOKEN=ZrSRNiGR0JX1DxOYgG9QGur4St5YeQAIt coveralls  
-
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: "Encrypted <access-key-id>=AKIARMWT2YKIYP2TJRBY"
-  secret_access_key:
-    secure: "Encypted <secret-access-key>=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"
-  region: "us-west-2"
-  app: "django-tutorial"
-  env: "django-env"
+  access_key_id: "AKIARMWT2YKIQ22S5GZQ"
+  secret_access_key: "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"
+  region: us-west-2
+  app: django-tutorial
+  env: django-env
+  bucket_name: elasticbeanstalk-us-west-2-096007275153
+  on:
+    branch: CI
+      
+
+
+after_script:
+  - COVERALLS_REPO_TOKEN=ZrSRNiGR0JX1DxOYgG9QGur4St5YeQAIt coveralls  
