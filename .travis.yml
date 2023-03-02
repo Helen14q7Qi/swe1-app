@@ -18,9 +18,9 @@ script:
 deploy:
   provider: elasticbeanstalk
   access_key_id:
-    secure: AKIARMWT2YKI2A2FIK7V
+    secure: AKIARMWT2YKIQ22S5GZQ
   secret_access_key:
-    secure: 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
+    secure: Qm963Dt79FsTGSH7tCCaItG0uT6szXqGgf43Drhm
   region: us-west-2
   app: django-tutorial
   env: django-env
