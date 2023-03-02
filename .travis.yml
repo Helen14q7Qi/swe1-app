@@ -24,6 +24,11 @@ deploy:
   region: "us-west-2"
   app: "django-tutorial"
   env: "django-env"
+  on:
+    repo: Helen14q7Qi/swe1-app
+    branches: 
+        - CI
+        - master
 
 
 after_script:
