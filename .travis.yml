@@ -25,9 +25,8 @@ deploy:
   app: "django-tutorial"
   env: "django-env"
   on:
-    repo: Helen14q7Qi/swe1-app
-    branch: 
-      all_branches: true
+    branch: CI
+      
 
 
 after_script:
