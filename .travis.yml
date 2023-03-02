@@ -26,9 +26,8 @@ deploy:
   env: "django-env"
   on:
     repo: Helen14q7Qi/swe1-app
-    branches: 
-        - CI
-        - master
+    branch: 
+      all_branches: true
 
 
 after_script:
