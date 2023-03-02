@@ -8,8 +8,8 @@ install:
 
 before_script:
   - cd ebdjango
-  - python3 manage.py migrate
-  - python3 manage.py collectstatic --noinput
+  - python3 ./ebdjango/manage.py migrate
+  
 
 script:
   - black --check .
