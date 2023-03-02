@@ -15,9 +15,6 @@ script:
   - flake8 .
   - coverage run ebdjango/manage.py test 
 
-after_script:
-  - COVERALLS_REPO_TOKEN=ZrSRNiGR0JX1DxOYgG9QGur4St5YeQAIt coveralls  
-
 deploy:
   provider: elasticbeanstalk
   access_key_id:
@@ -27,3 +24,7 @@ deploy:
   region: "us-west-2"
   app: "django-tutorial"
   env: "django-env"
+
+
+after_script:
+  - COVERALLS_REPO_TOKEN=ZrSRNiGR0JX1DxOYgG9QGur4St5YeQAIt coveralls  
