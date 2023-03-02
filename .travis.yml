@@ -4,11 +4,11 @@ python:
   - 3.7
 
 install:
-  - pip install -r requirements.txtpip
+  - pip install -r ./ebdjango/requirements.txt
 
 before_script:
-  - python manage.py migrate
-  - python manage.py collectstatic --noinput
+  - python3 ./ebdjango/manage.py migrate
+
 
 script:
   - black --check .
