@@ -7,9 +7,8 @@ install:
   - pip install -r ./ebdjango/requirements.txt
 
 before_script:
-  - cd ebdjango
   - python3 ./ebdjango/manage.py migrate
-  
+
 
 script:
   - black --check .
