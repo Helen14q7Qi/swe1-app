@@ -18,12 +18,12 @@ script:
 deploy:
   provider: elasticbeanstalk
   access_key_id:
-    secure: "AKIARMWT2YKI2A2FIK7V"
+    secure: AKIARMWT2YKI2A2FIK7V
   secret_access_key:
-    secure: "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"
-  region: "us-west-2"
-  app: "django-tutorial"
-  env: "django-env"
+    secure: Fhne/9rshbKNJIQ6ipAo2L1fU/pCTqVGcLVsdeKc
+  region: us-west-2
+  app: django-tutorial
+  env: django-env
   bucket_name: "elasticbeanstalk-us-west-2-096007275153"
   on:
     branch: CI
