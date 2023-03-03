@@ -17,12 +17,12 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id: "AKIARMWT2YKIQ22S5GZQ"
-  secret_access_key: "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"
+  access_key_id: "AKIAT4YP6OQK6ZA2JJNX"
+  secret_access_key: "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"
   region: us-west-2
   app: django-tutorial
   env: django-env
-  bucket_name: elasticbeanstalk-us-west-2-096007275153
+  bucket_name: elasticbeanstalk-us-west-2-267932038165
   on:
     branch: CI
       
